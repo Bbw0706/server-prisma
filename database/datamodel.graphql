@@ -1,0 +1,15 @@
+type User {
+  id: ID! @unique
+  name: String!
+  email: String! @unique
+  password: String!
+  contacts: [Contact!]!
+}
+
+type Contact {
+	id : ID! @unique
+	name : String!
+	email : String!
+	phone : String!
+	createdBy : User
+}
